@@ -16,3 +16,22 @@ const throttle = (fn, wait = 500) => {
     }
   }
 }
+
+async function onLoad() {
+  const re = await getList()
+}
+
+function onLoad() {
+  getList().then(re => {
+    console.log('re');
+  })
+}
+
+
+{
+  this.flag = true
+  
+  this.$nectTick(() => {
+    console.log(this.flag)
+  }) 
+}
